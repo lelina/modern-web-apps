@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Greatest Number</title>
+    <script src='../../programming-fundamention/lesson-03-functions/assert.js'></script>
+    <script>
+        // your scripts here
+        function greatestNum(x, y, z) {
+            if (x - y > 0 && x - z > 0) {
+                return x
+            }
+            else if
+            (y - x > 0 && y - z > 0) {
+                return y
+            }
+            else {
+                return z
+            }
+        }
+
+    </script>
+</head>
+<body>
+<script>
+
+    testThatOneHundredIsTheGreatestNumberBtwNinetyNineAndNinetyEight()
+
+    function testThatOneHundredIsTheGreatestNumberBtwNinetyNineAndNinetyEight() {
+        assertEquals(greatestNum(100, 99, 98), 100, '100 is the greatest number')
+        assertEquals(greatestNum(98, 99, 100), 100, '100 is the greatest number')
+        assertEquals(greatestNum(99, 98, 100), 100, '100 is the greatest number')
+    }
+
+    /* testThatOneIsGreaterThanZero()
+     testThatOneHundredIsGreaterThanNinetyNine()
+
+     function testThatOneIsGreaterThanZero () {
+       assertEquals(greaterNum(1, 0), 1, '1 is greater than 0')
+       assertEquals(greaterNum(0, 1), 1, '1 is greater than 0')
+     }
+
+     function testThatOneHundredIsGreaterThanNinetyNine () {
+       assertEquals(greaterNum(100, 99), 100, '100 is greater than 99')
+       assertEquals(greaterNum(99, 100), 100, '100 is greater than 99')
+     }
+ */
+</script>
+</body>
+</html>
