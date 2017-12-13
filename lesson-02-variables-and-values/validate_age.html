@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate age</title>
+</head>
+<body>
+<script>
+    /*console.log(validateAge("") ? "FALSE" : "TRUE")
+    console.log(validateAge(1) ? "TRUE" : "fALSE")*/
+
+    let age = Ageinput
+    "";
+
+    function age() {
+        return prompt('what\'s your puppy name?')
+    }
+
+    let chaomung = function () {
+        document.write("chao mung")
+    }
+    let thongbaoloi = function () {
+        document.write("tuoi khong hop le")
+    }
+
+    let task = validateAge(age) ? chaomung : thongbaoloi
+    task();
+
+    function validateAge() {
+        return age * 1 == age && age > 0 ? false : true
+    }
+
+</script>
+</body>
+</html>

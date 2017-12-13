@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doc write tai vi tri cu the</title>
+    <style>
+        #heading1 {
+            text-align: center;
+            color: red;
+        }
+
+        #para1 {
+            text-align: left;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<h2 id="heading1">Document write tai vi tri cu the</h2>
+<p id="para1">Tạo một file html có sẵn nội dung ở thẻ body. Thử document write nhiều lần liên tiếp, bạn thấy điều
+    gì xảy ra. Có thể có cách nào để "chọn" vị trí để write, thay vì write vào cuối tài liệu không? Thử publish một vài
+    demo.</p>
+<p id="para2"></p>
+
+<p> I just put another paragraphy here to check if the above line works well with document.getElementByID
+    ("id").innerHTLM='' :D </p>
+<button onclick="myFunction()">Result</button>
+
+<script>
+    /*This will make the whole document disappear!There's only 'amazing' left...sad :( */
+    function myFunction() {
+        document.write("Amazing!");
+    }
+
+    document.write(Date());
+    /*call out the id then write it with whatever you want in the innerHTML= part*/
+    document.getElementById("para2").innerHTML = 'here I am!';
+
+</script>
+</body>
+
+</html>

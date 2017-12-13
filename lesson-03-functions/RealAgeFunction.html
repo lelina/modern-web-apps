@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog's real age</title>
+</head>
+<body>
+<script>
+
+    let name = askForPuppyName()
+    let age = askForPuppyAge()
+    let realAge = calcRealAge(age)
+    document.write(name + 'is' + realAge + 'years old!')
+
+    console.log(calcReagAge(1), 7)
+    console.log(calcReagAge(2), 14)
+    console.log(calcReagAge(3), 21
+
+
+    function askForPuppyName() {
+        return prompt('what\'s your puppy name?')
+    }
+
+    function askForPuppyAge() {
+        return prompt('how old is your puppy?')
+    }
+
+    function calcRealAge() {
+        return 7 * age
+    }
+
+    function toMinAge(age) {
+        const DAYS_PER_YEAR = 365
+        const HRS_PER_DAY = 24
+        return age * DAYS_PER_YEAR * HRS_PER_DAY * 60
+    }
+
+</script>
+</body>
+</html>
