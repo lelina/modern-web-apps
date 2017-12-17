@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function assertEquals(actual, expected, message) {
+        const PASS = "PASS"
+        const FAIL = "FAIL"
+
+        let result = actual === expected;
+        /* remember: using 3 times = since it gives different results with 2 or 1 =*/
+        let prefix = result ? PASS : FAIL;
+        console.log(info = prefix + ":" + message)
+    }
+
+    function toFahrenheit(C) {
+        return C = (C * 9 / 5) + 32
+    }
+
+    function toCelsius(F) {
+        return F = (F - 32) * 5 / 9
+    }
+
+</script>
+<body>
+<script>
+    function testConvertTemp() {
+        assertEquals(194, toFahrenheit(90), "chuyen 90 do C sang do F")
+
+        assertEquals(32, toFahrenheit(0), "chuyen 0 do C sang do F")
+
+        assertEquals(37.78, toCelsius(100), "chuyen 100 do F sang do C")
+
+        assertEquals(-17.78, toCelsius(0), "chuyen 0 do F sang do C")
+    }
+
+    testConvertTemp();
+
+
+</script>
+
+</body>
+</html>
