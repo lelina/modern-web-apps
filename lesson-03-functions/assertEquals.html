@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assertEquals</title>
+</head>
+<script>
+    function assertEquals(actual, expected, message) {
+        const PASS = "PASS"
+        const FAIL = "FAIL"
+
+        let result = actual === expected;
+        /* remember: using 3 times = since it gives different results with 2 or 1 =*/
+        let prefix = result ? PASS : FAIL;
+        console.log(info = prefix + ":" + message)
+    }
+</script>
+<body>
+<script>
+    function testAssertEqualsfunction() {
+        assertEquals(0, 0, "0 equals 0")
+        assertEquals(true, true, "true is true")
+        assertEquals(true, 1 == 1, "true equals 1==1")
+        assertEquals(false, 1 !== 1, "false equals 1!=1")
+        assertEquals(null, null, "null is null")
+        assertEquals(undefined, undefined, "undefined is undefined")
+        assertEquals(null, undefined, "null isn't the same as undefined")
+        assertEquals("", null, "''isn't the same as null"
+        )
+        assertEquals("", undefined, "'' isn't the same as undefined"
+        )
+        assertEquals(0, false, "0 isn't the same as false")
+        assertEquals(undefined, false, " undefined isn't the same as false")
+        assertEquals(null, false, "null isn't the same as false")
+    }
+
+    testAssertEqualsfunction();
+
+
+</script>
+
+</body>
+</html>
