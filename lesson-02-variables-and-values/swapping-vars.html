@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>swapping vars</title>
+</head>
+<body>
+<script>
+    let a = "Nguyen Binh Son"
+    let b = "Ho ten"
+    console.log("original: ", a, ": ", b)
+    b = [a, a = b][0];
+    console.log("after swapping: ", a, ": ", b)
+</script>
+</body>
+</html>
