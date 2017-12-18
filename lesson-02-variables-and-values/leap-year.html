@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>leap-year</title>
+</head>
+<body>
+<script>
+    let leapYear = function (year) {
+        if ((year % 4 === 0 && year % 100 !== 0 && year % 400 === 0) || (year % 100 === 0 && year % 400 === 0)) {
+            return document.write(year + " la nam nhuan.");
+        } else {
+            return document.write(year + " khong la nam nhuan.");
+        }
+    };
+    let input = prompt("Input year: ");
+    leapYear(input);
+</script>
+
+</body>
+</html>
