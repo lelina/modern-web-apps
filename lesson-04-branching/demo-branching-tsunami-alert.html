@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo Tsunami alert</title>
+    <script src="../../programming-fundamention/lesson-03-functions/assert.js"></script>
+    <script>
+        function determine(distance, velocity) {
+            if (distance <= 100 || distance > 200 && velocity > 50) {
+                return "RED";
+            }
+            else if (distance <= 200) {
+                return "ORANGE";
+            }
+            else {
+                return "GREEN";
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+<script>
+    function testTsunamiAlert() {
+        assertEquals(determine(90), "RED", "Tsunami alert is RED");
+        assertEquals(determine(250, 55), "RED", "Tsunami alert is RED");
+        assertEquals(determine(150), "ORANGE", "Tsunami alert is ORANGE");
+        assertEquals(determine(500), "GREEN", "Tsunami alert is GREEN");
+    }
+
+    testTsunamiAlert()
+</script>
+
+</body>
+
+</html>
