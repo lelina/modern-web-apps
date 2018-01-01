@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle Drawing Test</title>
+    <script src="../../programming-fundamention/lesson-05-looping/rectangle.js" type="application/javascript"></script>
+    <script src="../../programming-fundamention/lesson-03-functions/assert.js" type="application/javascript"></script>
+</head>
+<body>
+<script !src="">
+    'use strict'
+
+    let str = '*';
+    let x, y, j, result;
+
+    function drawRectangle(x, y) {
+        let result = '';
+        let line = (str.repeat(x) + '\n');
+        for (j = 0; j < y; j++) {
+            result = result + line;
+            console.log(result)
+        }
+        return result;
+
+    }
+
+    assertEquals(drawRectangle(1, 1), '*\n', 'draw a dot')
+
+    assertEquals(drawRectangle(5, 1), '*****\n', 'draw five dots')
+
+    assertEquals(drawRectangle(10, 1), '**********\n', 'draw ten dots')
+
+    assertEquals(drawRectangle(10, 3),
+        '**********\n' +
+        '**********\n' +
+        '**********\n',
+        'draw rectangle 10x3')
+
+
+</script>
+</body>
+</html>
