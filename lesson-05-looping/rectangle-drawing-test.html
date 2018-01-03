@@ -18,10 +18,10 @@
         let line = (str.repeat(x) + '\n');
         for (j = 0; j < y; j++) {
             result = result + line;
-            console.log(result)
+            console.log(result);
         }
+        console.log("For testing purpose only - Result of x:" + x + " y:" + y + " is:\n" + result);
         return result;
-
     }
 
     assertEquals(drawRectangle(1, 1), '*\n', 'draw a dot')

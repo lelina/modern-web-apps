@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Empty rectangle Drawing Test</title>
+    <script src="../../programming-fundamention/lesson-05-looping/rectangle.js" type="application/javascript"></script>
+    <script src="../../programming-fundamention/lesson-03-functions/assert.js" type="application/javascript"></script>
+</head>
+<body>
+<script !src="">
+    'use strict'
+    let i, j;
+    let str = '*';
+
+    function drawEmptyRectangle(x, y) {
+        let result = '';
+        let line = (str.repeat(x) + '\n');
+        for (j = 0; j < y; j++) {
+            if (j == 0 || j == y - 1) {
+                result += line;
+                console.log(result);
+            }
+            else {
+                let emptyLine = '';
+
+                for (i = 0; i < x; i++) {
+                    if (i == 0 || i == x - 1) {
+                        emptyLine += '*';
+                    }
+                    else {
+                        emptyLine += ' ';
+                    }
+                    //console.log(result);
+                }
+                result += emptyLine + '\n';
+            }
+        }
+
+        return result
+    }
+
+    assertEquals(drawEmptyRectangle(1, 1), '*\n', 'draw a dot')
+
+    assertEquals(drawEmptyRectangle(10, 1), '**********\n', 'draw ten dots')
+
+    assertEquals(drawEmptyRectangle(10, 2),
+        '**********\n' +
+        '**********\n',
+        'draw empty rectangle 10x2')
+
+    assertEquals(drawEmptyRectangle(2, 10),
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n',
+        'draw empty rectangle 2x10')
+
+    assertEquals(drawEmptyRectangle(10, 3),
+        '**********\n' +
+        '*        *\n' +
+        '**********\n',
+        'draw empty rectangle 10x3')
+
+    assertEquals(drawEmptyRectangle(3, 10),
+        '***\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '***\n',
+        'draw empty rectangle 3x10')
+
+</script>
+</body>
+</html>
