@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The New Siri asks 3 times</title>
+</head>
+<body>
+<script>
+    'use strict'
+
+    let name
+    let password
+
+    do {
+        name = askName()
+        password = askPassword()
+        if (isMaster(name, password) == true) {
+            alert('welcome my master!');
+            break;
+        }
+
+    } while (!isMaster(name, password))
+
+
+    function isMaster(name, pwd) {
+        const MASTER_NAME = 'binhson'
+        const MASTER_PWD = '246357cn'
+        return name === MASTER_NAME && pwd === MASTER_PWD
+    }
+
+    function askName() {
+        console.log('asking for name')
+        let name = prompt('Who are you?')
+        console.log('got name!')
+        return name;
+    }
+
+    function askPassword() {
+        console.log('asking for password')
+        let pwd = prompt('Give me password')
+        console.log('got password!')
+        return pwd;
+    }
+
+
+</script>
+</body>
+</html>
