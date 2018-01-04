@@ -9,26 +9,27 @@
     /*console.log(validateAge("") ? "FALSE" : "TRUE")
     console.log(validateAge(1) ? "TRUE" : "fALSE")*/
 
-    let age = Ageinput
-    "";
+    let age = ageInput();
 
-    function age() {
-        return prompt('what\'s your puppy name?')
+    function ageInput() {
+        return prompt('what\'s your age?')
     }
 
     let chaomung = function () {
-        document.write("chao mung")
+        document.write("welcome!")
     }
     let thongbaoloi = function () {
-        document.write("tuoi khong hop le")
+        document.write("invalid age")
     }
-
-    let task = validateAge(age) ? chaomung : thongbaoloi
-    task();
 
     function validateAge() {
         return age * 1 == age && age > 0 ? false : true
     }
+
+    let task = validateAge(age) ? thongbaoloi : chaomung
+    task();
+
+
 
 </script>
 </body>
