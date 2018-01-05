@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Line Segment Test Test</title>
+    <script src='line-segment.js' type='application/javascript'></script>
+    <script src='assert.js' type='application/javascript'></script>
+</head>
+<body>
+<script>
+    'use strict'
+    testCreateLineSegmentObject()
+    testCreateLineSegmentObjectWithLength()
+    testObjectCanPrintItself()
+
+    function testCreateLineSegmentObject() {
+        let lineSeg = createLineSegment()
+        assertNotEquals(lineSeg, null, "test that initialized result is not null ")
+        assertEquals(typeof lineSeg, typeof {}, "test that initialized result is an object")
+    }
+
+    function testCreateLineSegmentObjectWithLength() {
+        let lineSeg = createLineSegment(3)
+        assertEquals(lineSeg.length, 3, "test that initialized has length")
+
+        lineSeg = createLineSegment(5)
+        assertEquals(lineSeg.length, 5, "test that initialized has length that follow by parameter that passed")
+
+    }
+
+    function testObjectCanPrintItself() {
+        let lineSeg = createLineSegment(3)
+        assertNotEquals(lineSeg.print, null, "test that initialized result is not null ")
+        assertEquals(typeof lineSeg.print, typeof function () {
+        }, "test that print is a method")
+        assertEquals(lineSeg.print(), "***", "test that print method can visualization self object")
+
+        lineSeg = createLineSegment(5)
+        assertEquals(lineSeg.print(), "*****", "test that print method can visualization self object")
+
+    }
+
+</script>
+</body>
+</html>
