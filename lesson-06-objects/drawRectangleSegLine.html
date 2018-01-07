@@ -1,1 +1,63 @@
-k
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Draw Rectangle by Segment Line Segment</title>
+    <script src='line-segment.js' type='application/javascript'></script>
+    <script src='assert.js' type='application/javascript'></script>
+</head>
+<script>
+    'use strict'
+    /*let drawing = ''
+    let remainingLine = 3
+    while (remainingLine > 0) {
+      drawing += createLineSegment(5).print()
+      drawing += '\n'
+      remainingLine--
+    }
+    console.log(drawing)*/
+    //apply line segment into rectangle drawing
+
+    function drawRectangleSegline(numberOfStar, remainingLine) {
+        let drawing = '';
+        while (remainingLine > 0) {
+            drawing += createLineSegment(numberOfStar).print()
+            drawing += '\n'
+            remainingLine--
+        }
+        console.log(drawing)
+        return drawing
+    }
+
+    assertEquals(drawRectangleSegline(1, 1), '*\n', 'draw a dot')
+    assertEquals(drawRectangleSegline(10, 1), '**********\n', 'draw ten dots')
+
+    assertEquals(drawRectangleSegline(10, 2),
+        '**********\n' +
+        '**********\n',
+        'draw rectangle by segment line 10x2')
+
+    assertEquals(drawRectangleSegline(2, 10),
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n',
+        'draw rectangle by segment line 2x10')
+
+    assertEquals(drawRectangleSegline(10, 3),
+        '**********\n' +
+        '**********\n' +
+        '**********\n',
+        'draw rectangle by segment line 10x3')
+
+
+</script>
+<body>
+</body>
+</html>

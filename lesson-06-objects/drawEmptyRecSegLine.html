@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Draw Empty Rectangle Segment Line</title>
+    <script src='line-segment.js' type='application/javascript'></script>
+    <script src='assert.js' type='application/javascript'></script>
+</head>
+<script>
+    'use strict'
+    /*let drawing = ''
+    let remainingLine = 3
+    while (remainingLine > 0) {
+      drawing += createLineSegment(5).print()
+      drawing += '\n'
+      remainingLine--
+    }
+    console.log(drawing)*/
+    //apply line segment into rectangle drawing
+
+    /* function drawEmptyRectangleSegline(numberOfStar,remainingLine) {
+         let drawing = '';
+         let emptyLine = '';
+         let str = ' ';
+         let y;
+         for (y = 0; y < remainingLine; y++) {
+             if (y == 0 || y == (remainingLine - 1)) {
+                 drawing += createLineSegment(numberOfStar).print();
+                 drawing += '\n'
+             }
+             else {
+                 emptyLine += '*' + str.repeat(numberOfStar - 2) + '*' + '\n';
+                 drawing += emptyLine;
+             }
+         }
+         console.log(drawing);
+         return (drawing)
+     }*/
+
+    function drawEmptyRectangleSegline(numberOfStar, remainingLine) {
+        let drawing = '';
+        let emptyLine = '';
+        let str = ' ';
+        let y;
+        for (y = 0; y < remainingLine; y++) {
+            if (y == 0 || y == (remainingLine - 1)) {
+                drawing += createLineSegment(numberOfStar).print();
+                drawing += '\n'
+            }
+            else {
+                emptyLine = '*' + str.repeat(numberOfStar - 2) + '*' + '\n';
+                drawing += emptyLine;
+            }
+
+        }
+        console.log(drawing);
+        return (drawing)
+    }
+
+    assertEquals(drawEmptyRectangleSegline(1, 1), '*\n', 'draw a dot')
+
+    assertEquals(drawEmptyRectangleSegline(10, 1), '**********\n', 'draw ten dots')
+    assertEquals(drawEmptyRectangleSegline(2, 2),
+        '**\n' +
+        '**\n'
+        , 'draw rectangle 2x2')
+    assertEquals(drawEmptyRectangleSegline(10, 2),
+        '**********\n' +
+        '**********\n',
+        'draw rectangle 10x2')
+
+    assertEquals(drawEmptyRectangleSegline(2, 10),
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n' +
+        '**\n',
+        'draw empty rectangle 2x10')
+    assertEquals(drawEmptyRectangleSegline(10, 3),
+        '**********\n' +
+        '*        *\n' +
+        '**********\n',
+        'draw empty rectangle 10x3')
+
+    assertEquals(drawEmptyRectangleSegline(3, 10),
+        '***\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '* *\n' +
+        '***\n',
+        'draw empty rectangle 3x10')
+
+</script>
+<body>
+</body>
+</html>
